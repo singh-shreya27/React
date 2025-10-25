@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <!-- //This <div> is the container where React will control everything. -->
+    <!-- HTML gives React a place to work -->
+
+    <div id="root"></div>  
+
+    <!-- CDN LINKS -->
+     <!-- React for creating elements and ReactDOM for putting them on the screen. -->
+     <script crossorigin 
+     src="https://unpkg.com/react@18/umd/react.development.js">
+    </script>
+    <script crossorigin 
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+    </script>
+    <script>
+
+        //3 STEPS TO PRINT HELLO WORLD FROM REACT
+        //STEP 1:CREATE H1 TAG(heading) using createElement
+        //STEP 2: CREATE ROOT using createROOT
+        //STEP 3: render heading inside root.
+        //create H1 tag in react : 
+        // takes 3 arguments(html tag, an object for attributes or props, "content inside tag")
+        const heading=React.createElement("h1",{},"Hello World from React!");
+        //it doesn’t yet render to the screen — it just exists in memory.
+
+        //React need to have a root where it will do all the DOM manipulation
+        // ReactDOM library is used here[IMPORTANT]
+        const root= ReactDOM.createRoot(document.getElementById("root"));
+        //This is how React connects its virtual DOM to the real webpage.
+
+        //Render(Displays) the heading inside root 
+        root.render(heading);
+
+    </script>
+</body>
+</html>
